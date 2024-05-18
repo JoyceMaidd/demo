@@ -7,8 +7,6 @@ export default {
   theme: {
     extend: {
       colors:{
-        activeColor:'#4A7353',
-        deActiveColor:'#BACD92'
       }
     },
   },
