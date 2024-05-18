@@ -8,9 +8,9 @@ const App = () => {
   return (
     <BrowserRouter>
      <header>
-       <Navbar />
+       <Navbar/>
      </header>
-     <main>
+     <main className='bg-yellow-50 w-screen h-screen'>
       <WorkSpace/>
      </main>
     </BrowserRouter>
