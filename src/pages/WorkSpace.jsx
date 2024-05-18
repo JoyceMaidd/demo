@@ -15,17 +15,19 @@ const WorkSpace = (props) => {
   }
   return (
     <div>
-      <div>
-        <Step number={1} title={"Upload Resume"} currentStep={currentStep} />
-        <Step number={2} title={"Review Profile"} currentStep={currentStep} />
-        <Step number={3} title={"Job Details"} currentStep={currentStep} />
+      <div className="flex justify-center">
+        <div className="w-full">
+          <Step number={1} title={"Upload Resume"} currentStep={currentStep} />
+          <Step number={2} title={"Review Profile"} currentStep={currentStep} />
+          <Step number={3} title={"Job Details"} currentStep={currentStep} />
+        </div>
+        <div className="w-full p-5 border-4 rounded-md">
+          { currentStep == 1 && <FileUpload />} 
+          { currentStep == 2 && <ReviewProfile />} 
+          { currentStep == 3 && <JobDetails/>}
+        </div>
       </div>
-        { currentStep == 1 && <FileUpload />} 
-        { currentStep == 2 && <ReviewProfile />} 
-        { currentStep == 3 && <JobDetails/>}
-        <NavButtons nextStep={nextStep} prevStep={prevStep} step={currentStep}/>
-      
-        
+      <NavButtons nextStep={nextStep} prevStep={prevStep} step={currentStep}/>
     </div>
     
   )
