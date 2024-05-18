@@ -15,14 +15,14 @@ const WorkSpace = (props) => {
   }
   return (
     <div>
-      <div className="flex justify-center px-40 py-[100px]">
+      <div className="flex justify-center px-40 pt-[150px]">
         <div className="w-full">
           <Step number={1} title={"Upload Resume"} currentStep={currentStep} />
           <Step number={2} title={"Review Profile"} currentStep={currentStep} />
           <Step number={3} title={"Job Details"} currentStep={currentStep} />
         </div>
         <div className="flex flex-col justify-center w-full gap-5">
-          <div className="border-4 rounded-md">
+          <div className="flex min-h-64 border-4 rounded-md p-4">
             { currentStep == 1 && <FileUpload />} 
             { currentStep == 2 && <ReviewProfile />} 
             { currentStep == 3 && <JobDetails/>}
