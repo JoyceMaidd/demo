@@ -2,12 +2,12 @@ import React from 'react'
 
 const ReviewProfile = () => {
   return (
-<form>
+<form className="w-full">
   <div class="space-y-12">
     <div>
       <h2 class="text-lg font-semibold leading-7 text-gray-900">Profile</h2>
 
-      <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+      <div class="mt-6">
         <div class="sm:col-span-3">
           <label for="first-name" class="block text-sm font-medium leading-6 text-gray-900">First name</label>
           <div class="mt-2">
