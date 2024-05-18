@@ -10,7 +10,7 @@ const App = () => {
      <header>
        <Navbar/>
      </header>
-     <main className='bg-yellow-50 w-screen h-screen'>
+     <main className='bg-yellow-50'>
       <WorkSpace/>
      </main>
     </BrowserRouter>
