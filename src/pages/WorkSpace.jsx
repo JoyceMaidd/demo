@@ -21,13 +21,15 @@ const WorkSpace = (props) => {
           <Step number={2} title={"Review Profile"} currentStep={currentStep} />
           <Step number={3} title={"Job Details"} currentStep={currentStep} />
         </div>
-        <div className="w-full border-4 rounded-md">
-          { currentStep == 1 && <FileUpload />} 
-          { currentStep == 2 && <ReviewProfile />} 
-          { currentStep == 3 && <JobDetails/>}
+        <div className="flex flex-col justify-center w-full gap-5">
+          <div className="border-4 rounded-md">
+            { currentStep == 1 && <FileUpload />} 
+            { currentStep == 2 && <ReviewProfile />} 
+            { currentStep == 3 && <JobDetails/>}
+          </div>
+          <NavButtons nextStep={nextStep} prevStep={prevStep} step={currentStep}/>
         </div>
       </div>
-      <NavButtons nextStep={nextStep} prevStep={prevStep} step={currentStep}/>
     </div>
     
   )
