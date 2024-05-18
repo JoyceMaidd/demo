@@ -1,0 +1,47 @@
+prompt: You are applying for ${jobTitle} position at ${companyName}. Write the body paragraph of a cover letter for a job application. The cover letter should be well-structured and professional. Here are the details:
+
+    - **Work Experience**: ${workExperience}
+    - **Company Name**: ${companyName}
+    - **Job Title**: ${jobTitle}
+    - **Job Description**: ${jobDescription}
+    - **Email**: ${email}
+
+    Please generate the body of the cover letter with the following structure:
+
+    1. **Introduction**: Write an attention-grabbing hook for your cover letter that highlights your experience and qualifications in a way that shows you empathize and can successfully take on the challenge of the ${jobTitle} role.
+    2. **First Paragraph**: Highlight your experience relevant to the job description: ${jobDescription} you gain from your work experience
+    3. **Second Paragraph**: Discuss and quantify your impact on one of your previous roles that is most relevent to the job you applied for based on your work experience: ${workExperience}. 
+    4. **Conclusion**: Thank the reader. Brifly mention again your relevant skills and reinforce your interest in the role. Leave your contact email: ${email}
+
+    [Introduction]
+
+    [First Paragraph]
+
+    [Second Paragraph]
+
+    [Conclusion]
+
+
+###
+Work Experience: Management Consulting Intern ABC Consulting Group June 2023 - August 2023 Contributed to a finance project worth $2 million, participating in all stages from the initial pitch to the final analysis. Assisted in the development of a Shared Service Center (SSC) analysis, providing insights and recommendations to improve operational efficiency. Recognized for exceptional project management skills, consistently meeting deadlines and ensuring timely delivery of client deliverables. Collaborated with senior consultants to gather and analyze data, prepare reports, and present findings to clients.
+Consulting Intern Sun Life June 2022 - August 2022 Developed problem-solving skills through hands-on involvement in various client projects across multiple industries. Supported the preparation of client presentations, reports, and pitch decks, contributing to successful client engagements. Conducted market research and data analysis to support client recommendations and strategies. Assisted in the coordination and management of project tasks, ensuring alignment with client objectives and timelines.
+
+Company Name: EY
+Job Title: Staff Consultant
+Job Description: The job involves leading client engagement teams and delivering professional services to a diverse range of clients. Key responsibilities include managing project budgets, delivering high-quality services, and ensuring client satisfaction. The role requires establishing and maintaining productive relationships with clients, understanding their industry, and recognizing key business trends. Responsibilities also include developing team members through feedback and training, fostering a collaborative work environment, staying current with industry developments, and generating new business opportunities. The position emphasizes building long-term client relationships and collaborating with Ernst & Young team members across various practices.
+
+Email: amanda@gmail.com
+
+Introduction: Everyone tells me the entry-level consultant position in any of the Big 4 firms is going to be the same. However, after attending 5 career fairs and speaking with over 20 professionals, it has become clear to me EY stands out from the rest.
+First Paragraph: Having spent the past 2 summers interning at management consulting firms, I have not only developed robust problem-solving skills, but also a flair for project management.
+
+First Paragraph: Having spent the past 2 summers interning at management consulting firms, I have not only developed robust problem-solving skills, but also a flair for project management.
+
+Second Paragraph: In my latest role, I was involved in the full life-cycle of a finance project worth US$ 2M: starting with the initial pitch deck all the way to assisting with a Shared Service Center (SSC) analysis. In particular, I received recognition for always being on top of deadlines and ensuring client deliverables were on time.
+
+Comclusion:Thank you for your time and consideration. My work experiences, coupled with my affinity for project management, would make me an asset to EY’s Staff Consultant Program. I can be easily reached at your convenience by email (amanda@gmail.com).
+###
+
+
+
+
