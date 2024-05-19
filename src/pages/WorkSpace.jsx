@@ -1,6 +1,8 @@
 import React from 'react'
 import {Step, FileUpload, NavButtons, ReviewProfile, JobDetails} from '../components'
-const WorkSpace = ({letter, setLetter}) => {
+import LetterGenerate from '../components/LetterGenerate'
+const WorkSpace = () => {
+  const [letter, setLetter] = React.useState("")
   const [currentStep, setCurrentStep] = React.useState(1)
   const [sending, setSending] = React.useState(false)
   const [status, setStatus] = React.useState("")
@@ -40,15 +42,10 @@ const WorkSpace = ({letter, setLetter}) => {
         jobDescription: ''
       });
       setSending(false);
-      setLetter("Hello world");
+      setLetter(data.message);
+      setCurrentStep(4);
     })
   }
-
-  React.useEffect(() => {
-    if (letter !== "")
-      console.log("Letter generated");
-      window.open("/generatedletter", "_self");
-  }, [letter])
   
   const nextStep = () => {
     if(currentStep<4){
@@ -62,20 +59,26 @@ const WorkSpace = ({letter, setLetter}) => {
   }
   return (
     <div className="flex justify-center py-40 px-40">
-      <div className="w-full">
-        <Step number={1} title={"Upload Resume"} currentStep={currentStep} />
-        <Step number={2} title={"Review Profile"} currentStep={currentStep} />
-        <Step number={3} title={"Job Details"} currentStep={currentStep} />
-      </div>
-      <div className="flex flex-col justify-center w-full gap-5">
-        <form className="flex min-h-64 border-2 border-slate-400 rounded-md p-4" onSubmit={handleSubmit}>
-          { currentStep == 1 && <FileUpload setResume={setResume} />}
-          { currentStep == 2 && <ReviewProfile setFormData={setFormData} />} 
-          { currentStep == 3 && <JobDetails setFormData={setFormData}/>}
-        </form>
-        <NavButtons nextStep={nextStep} prevStep={prevStep} step={currentStep} handleSubmit={handleSubmit} disabled={sending}/>
-        <p>{status}</p>
-      </div>
+      {
+        currentStep < 4 && <>
+          <div className="w-full">
+            <Step number={1} title={"Upload Resume"} currentStep={currentStep} />
+            <Step number={2} title={"Review Profile"} currentStep={currentStep} />
+            <Step number={3} title={"Job Details"} currentStep={currentStep} />
+          </div>
+          <div className="flex flex-col justify-center w-full gap-5">
+            <form className="flex min-h-64 border-2 border-slate-400 rounded-md p-4" onSubmit={handleSubmit}>
+              { currentStep == 1 && <FileUpload setResume={setResume} />}
+              { currentStep == 2 && <ReviewProfile setFormData={setFormData} />} 
+              { currentStep == 3 && <JobDetails setFormData={setFormData}/>}
+            </form>
+            <NavButtons nextStep={nextStep} prevStep={prevStep} step={currentStep} handleSubmit={handleSubmit} disabled={sending}/>
+            <p>{status}</p>
+          </div>
+
+        </>
+      }
+      { currentStep == 4 && <LetterGenerate letter={letter} /> }
     </div>
   )
 }
