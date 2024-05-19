@@ -41,7 +41,6 @@ const WorkSpace = (props) => {
         });
         setSending(false);
         setStatus(data.message);
-        setTimeout(() => setStatus(""), 5000);
     })
   }
   

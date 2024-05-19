@@ -3,8 +3,6 @@ import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
 import { Navbar } from './components'
 import WorkSpace from './pages/WorkSpace'
 const App = () => {
-
-  
   return (
     <BrowserRouter>
      <header>
