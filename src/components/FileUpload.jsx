@@ -1,10 +1,9 @@
 import React from 'react'
 
-const FileUpload = ({ onChange }) => {
+const FileUpload = ({ setResume }) => {
   const handleFileUpload = (event) => {
-    // Logic to extract data from the uploaded resume and update the formData
-    const extractedData = {}; // Extracted data from resume
-    onChange({ personalInfo: extractedData });
+    const file = event.target.files[0]
+    setResume(file)
   };
 
   return (
@@ -17,7 +16,7 @@ const FileUpload = ({ onChange }) => {
           <p class="mb-2 text-sm text-gray-500"><span class="font-semibold">Click to upload</span> or drag and drop</p>
           <p class="text-xs text-gray-500">DOC, DOCX, or PDF</p>
         </div>
-        <input id="dropzone-file" type="file" class="hidden" />
+        <input id="dropzone-file" type="file" class="hidden" onChange={handleFileUpload} />
       </label>
     </div> 
 
