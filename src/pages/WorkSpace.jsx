@@ -64,7 +64,7 @@ const WorkSpace = (props) => {
         <Step number={3} title={"Job Details"} currentStep={currentStep} />
       </div>
       <div className="flex flex-col justify-center w-full gap-5">
-        <form className="flex min-h-64 border-4 rounded-md p-4" onSubmit={handleSubmit}>
+        <form className="flex min-h-64 border-2 border-slate-400 rounded-md p-4" onSubmit={handleSubmit}>
           { currentStep == 1 && <FileUpload setResume={setResume} />}
           { currentStep == 2 && <ReviewProfile setFormData={setFormData} />} 
           { currentStep == 3 && <JobDetails setFormData={setFormData}/>}
