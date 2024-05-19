@@ -1,6 +1,6 @@
 import React from 'react'
 import {Step, FileUpload, NavButtons, ReviewProfile, JobDetails} from '../components'
-const WorkSpace = (props) => {
+const WorkSpace = ({letter, setLetter}) => {
   const [currentStep, setCurrentStep] = React.useState(1)
   const [sending, setSending] = React.useState(false)
   const [status, setStatus] = React.useState("")
@@ -30,20 +30,25 @@ const WorkSpace = (props) => {
         method: "POST",
         body: data
     }).then((response) => response.json()).then((data) => {
-        setFormData({
-          firstName: '',
-          lastName: '',
-          email: '',
-          workExperience: '',
-          jobTitle: '',
-          companyName: '',
-          jobDescription: ''
-        });
-        setSending(false);
-        setStatus(data.message);
-      })
-      window.open("/generatedletter", "_self")
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        workExperience: '',
+        jobTitle: '',
+        companyName: '',
+        jobDescription: ''
+      });
+      setSending(false);
+      setLetter("Hello world");
+    })
   }
+
+  React.useEffect(() => {
+    if (letter !== "")
+      console.log("Letter generated");
+      window.open("/generatedletter", "_self");
+  }, [letter])
   
   const nextStep = () => {
     if(currentStep<4){
