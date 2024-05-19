@@ -42,7 +42,8 @@ const WorkSpace = (props) => {
         setSending(false);
         setStatus(data.message);
         setTimeout(() => setStatus(""), 5000);
-    })
+        window.open("/generatedletter", "_self")
+      })
   }
   
   const nextStep = () => {
@@ -56,7 +57,7 @@ const WorkSpace = (props) => {
     }
   }
   return (
-    <div className="flex pb-10 justify-center px-40 pt-[100px]">
+    <div className="flex justify-center py-40 px-40">
       <div className="w-full">
         <Step number={1} title={"Upload Resume"} currentStep={currentStep} />
         <Step number={2} title={"Review Profile"} currentStep={currentStep} />
