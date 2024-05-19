@@ -58,7 +58,7 @@ const WorkSpace = () => {
     }
   }
   return (
-    <div className="flex justify-center py-40 px-40">
+    <div className="flex justify-center">
       {
         currentStep < 4 && <>
           <div className="w-full">
