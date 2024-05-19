@@ -6,12 +6,12 @@ prompt: You are applying for ${jobTitle} position at ${companyName}. Write the b
     - **Job Description**: ${jobDescription}
     - **Email**: ${email}
 
-    Please generate the body of the cover letter with the following structure:
-
     1. **Introduction**: Write an attention-grabbing hook for your cover letter that highlights your experience and qualifications in a way that shows you empathize and can successfully take on the challenge of the ${jobTitle} role.
     2. **First Paragraph**: Highlight your experience relevant to the job description: ${jobDescription} you gain from your work experience
     3. **Second Paragraph**: Discuss and quantify your impact on one of your previous roles that is most relevant to the job you applied for based on your work experience: ${workExperience}. 
     4. **Conclusion**: Thank the reader. Brifly mention again your relevant skills and reinforce your interest in the role. Leave your contact email: ${email}
+
+    Please generate the body paragraphs of the cover letter with the following structure:
 
     [Introduction]
 
