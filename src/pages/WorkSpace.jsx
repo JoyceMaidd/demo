@@ -42,8 +42,8 @@ const WorkSpace = (props) => {
         setSending(false);
         setStatus(data.message);
         setTimeout(() => setStatus(""), 5000);
-        window.open("/generatedletter", "_self")
       })
+      window.open("/generatedletter", "_self")
   }
   
   const nextStep = () => {
